@@ -6,7 +6,7 @@ require('chai')
     .use(require('chai-as-promised'))
     .should()
 
-contract('CrowdFunding', ([deployer]) => {
+contract('CrowdFunding', ([deployer, contributor]) => {
     let crowdfunding;
 
     before(async () => {
@@ -20,6 +20,12 @@ contract('CrowdFunding', ([deployer]) => {
             assert.notEqual(address, '');
             assert.notEqual(address, null);
             assert.notEqual(address, undefined);
+        })
+    })
+
+    describe('contribution', async () => {
+        it('contributes succefully', async () => {
+            
         })
     })
 })
